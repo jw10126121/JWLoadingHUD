@@ -1,0 +1,31 @@
+{
+  "name": "JWLoadingHUD",
+  "version": "0.0.1",
+  "summary": "JWProgressHUD.指示器",
+  "homepage": "https://github.com/jw10126121/JWLoadingHUD",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jw10126121": "10126121@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/jw10126121/JWLoadingHUD.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "JWLoadingHUD/Classes/**/*",
+  "resources": "JWLoadingHUD/JWLoadingHUD.bundle",
+  "swift_versions": [
+    "4.2",
+    "5.0"
+  ],
+  "dependencies": {
+    "MBProgressHUD": [
+      "~> 1.1.0"
+    ]
+  }
+}

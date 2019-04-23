@@ -1,0 +1,6 @@
+framework module JWLoadingHUD {
+  umbrella header "JWLoadingHUD-umbrella.h"
+
+  export *
+  module * { export * }
+}

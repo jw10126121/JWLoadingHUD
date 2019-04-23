@@ -1,6 +1,0 @@
-framework module JWProgressHUD {
-  umbrella header "JWProgressHUD-umbrella.h"
-
-  export *
-  module * { export * }
-}
