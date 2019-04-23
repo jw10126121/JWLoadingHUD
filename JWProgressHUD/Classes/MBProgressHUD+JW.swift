@@ -25,42 +25,6 @@ internal extension MBProgressHUD {
          label.font = config.textFont
          minSize = config.minSize
         
-        
-    }
-    
-    /// 配置样式
-    @discardableResult func setupHUD() -> MBProgressHUD {
-        
-        /// 隐藏时，移出父视图
-        self.removeFromSuperViewOnHide = true
-        /// 不可点击
-        self.isUserInteractionEnabled = false
-        ///
-        self.isSquare = false
-        /// 间距
-        self.margin = 20
-        ///
-        self.offset = CGPoint(x: 0, y: -20)
-        
-        // HUD背景设置
-        
-        /// HUD背景颜色
-        self.bezelView.color = .black
-        /// HUD背景圆角
-        self.bezelView.layer.cornerRadius = 4
-        /// HUD背景样式
-        self.bezelView.style = .solidColor
-        
-        self.minSize = CGSize(width: 100, height: 80)
-        /// 内容颜色
-        self.contentColor = .white
-        
-        // 文字配置
-        
-        self.label.font = UIFont.systemFont(ofSize: 15)
-        self.label.numberOfLines = 3;
-        
-        return self
     }
     
     /// 配置(链式调用)

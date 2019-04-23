@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class JWProgressAnimatedView: UIView {
+public class JWLoadingAnimatedView: UIView {
 
     override public func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
@@ -139,7 +139,7 @@ public class JWProgressAnimatedView: UIView {
     
 }
 
-extension JWProgressAnimatedView: HUDLoadingViewable {
+extension JWLoadingAnimatedView: HUDLoadingViewable {
     
     /// 动画开始
     public func startAnimation() {

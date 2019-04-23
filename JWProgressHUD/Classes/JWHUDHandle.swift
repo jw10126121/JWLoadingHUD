@@ -18,7 +18,7 @@ public enum JWHUDMode {
     
 }
 
-public class JWHUDManager {
+public class JWHUDHandle {
     
     /// 模式
     private var mode: JWHUDMode = .loading(nil) {
@@ -51,8 +51,8 @@ public class JWHUDManager {
     }
     
     /// HUD内容
-    public lazy var hudContainerView: JWProgressHUDCustomView = {
-        let view = JWProgressHUDCustomView()
+    public lazy var hudContainerView: JWLoadingCustomView = {
+        let view = JWLoadingCustomView()
         return view
     }()
     
@@ -64,7 +64,7 @@ public class JWHUDManager {
     }
 
     /// 配置样式
-    @discardableResult fileprivate func setup(hud: MBProgressHUD) -> JWHUDManager {
+    @discardableResult fileprivate func setup(hud: MBProgressHUD) -> JWHUDHandle {
         
         /// 隐藏时，移出父视图
         hud.removeFromSuperViewOnHide = true
@@ -141,7 +141,7 @@ public class JWHUDManager {
     @discardableResult public func show(config: JWHUDStyle = JWHUDStyle.defaultConfig,
                                         mode: JWHUDMode,
                                         animated: Bool = true,
-                                        hiddenDelay: TimeInterval = 0) -> JWHUDManager {
+                                        hiddenDelay: TimeInterval = 0) -> JWHUDHandle {
         
         let view = containerView
         let hudView = view.hud
@@ -153,7 +153,7 @@ public class JWHUDManager {
         
     }
     
-    @discardableResult public func dismiss(animated: Bool = true, afterDelay: TimeInterval = 0) -> JWHUDManager {
+    @discardableResult public func dismiss(animated: Bool = true, afterDelay: TimeInterval = 0) -> JWHUDHandle {
         
         let hudView = containerView.hud
         hudView.dismiss(animated: animated, afterDelay: afterDelay)

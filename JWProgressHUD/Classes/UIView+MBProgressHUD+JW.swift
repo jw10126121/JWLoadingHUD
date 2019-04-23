@@ -11,7 +11,7 @@ import MBProgressHUD
 /// 拓展UIView+MBProgressHUD
 public extension UIView {
     
-    var hudManager: JWHUDManager {
+    var hudManager: JWHUDHandle {
         
         set {
             objc_setAssociatedObject(self,
@@ -21,11 +21,11 @@ public extension UIView {
         }
         
         get {
-            let extObject = (objc_getAssociatedObject(self, &UIView_MBProgressHUD_Key.hudManagerKey) as? JWHUDManager)
+            let extObject = (objc_getAssociatedObject(self, &UIView_MBProgressHUD_Key.hudManagerKey) as? JWHUDHandle)
             if let extObject = extObject {
                 return extObject
             } else {
-                let aObject = JWHUDManager(containerView: self)
+                let aObject = JWHUDHandle(containerView: self)
                 objc_setAssociatedObject(self,
                                          &UIView_MBProgressHUD_Key.hudManagerKey,
                                          aObject,
@@ -55,7 +55,8 @@ public extension UIView {
                 return extedHud
             } else {
                 /// 生成一个新的HUD
-                let aObject = MBProgressHUD(view: self).config { $0.setupHUD() }
+                let aObject = MBProgressHUD(view: self)
+                    .config { $0.setup(config: JWHUDStyle.defaultConfig) }
                 objc_setAssociatedObject(self,
                                          &UIView_MBProgressHUD_Key.hudInstanceKey,
                                          aObject,

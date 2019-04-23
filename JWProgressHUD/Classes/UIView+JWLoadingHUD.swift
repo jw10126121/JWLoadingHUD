@@ -37,8 +37,8 @@ public extension UIView {
     }
     
     /// 通过配置，生成自定义视图
-    private func customView(config: JWHUDStyle) -> JWProgressHUDCustomView {
-        let view = JWProgressHUDCustomView()
+    private func customView(config: JWHUDStyle) -> JWLoadingCustomView {
+        let view = JWLoadingCustomView()
         view.titleLabel.font = config.textFont
         view.contentMargin = config.contentSpacing
         view.titleLabel.textColor = config.textColor
@@ -46,7 +46,8 @@ public extension UIView {
         return view
     }
     
-    private func configHUDCustomView(customView: JWProgressHUDCustomView, mode: JWHUDMode) {
+    /// 配置 JWLoadingCustomView
+    private func configHUDCustomView(customView: JWLoadingCustomView, mode: JWHUDMode) {
         
         switch mode {
         case .loading(let text):
@@ -81,24 +82,23 @@ public extension UIView {
 
 extension UIView {
     
+    /// runtime keys
     private struct UIViewHUDKeys {
-        static var timer        = "com.toast-swift.timer"
-        static var duration     = "com.toast-swift.duration"
-        static var point        = "com.toast-swift.point"
-        static var completion   = "com.toast-swift.completion"
-        static var activeToasts = "com.toast-swift.activeToasts"
-        static var activityView = "com.toast-swift.activityView"
-        static var queue        = "com.toast-swift.queue"
+        static var activeHUDs = "com.jw.app.loadingHUD.activeHUDs"
+        static var queueHUDs  = "com.jw.app.loadingHUD.queueHUDs"
     }
     
     /// 当前活动的HUD
     private var activeHUDs: NSMutableArray {
         get {
-            if let activeToasts = objc_getAssociatedObject(self, &UIViewHUDKeys.activeToasts) as? NSMutableArray {
+            if let activeToasts = objc_getAssociatedObject(self, &UIViewHUDKeys.activeHUDs) as? NSMutableArray {
                 return activeToasts
             } else {
                 let activeToasts = NSMutableArray()
-                objc_setAssociatedObject(self, &UIViewHUDKeys.activeToasts, activeToasts, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+                objc_setAssociatedObject(self,
+                                         &UIViewHUDKeys.activeHUDs,
+                                         activeToasts,
+                                         .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
                 return activeToasts
             }
         }
@@ -107,11 +107,14 @@ extension UIView {
     /// 当前队列中的HUD
     private var queueHUDs: NSMutableArray {
         get {
-            if let queue = objc_getAssociatedObject(self, &UIViewHUDKeys.queue) as? NSMutableArray {
+            if let queue = objc_getAssociatedObject(self, &UIViewHUDKeys.queueHUDs) as? NSMutableArray {
                 return queue
             } else {
                 let queue = NSMutableArray()
-                objc_setAssociatedObject(self, &UIViewHUDKeys.queue, queue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+                objc_setAssociatedObject(self,
+                                         &UIViewHUDKeys.queueHUDs,
+                                         queue,
+                                         .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
                 return queue
             }
         }

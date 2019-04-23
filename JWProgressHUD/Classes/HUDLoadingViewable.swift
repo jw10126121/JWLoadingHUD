@@ -7,11 +7,13 @@
 
 import Foundation
 
-/// 加载View
+/// 加载中视图协议
 public protocol HUDLoadingViewable {
     
+    /// 动画开始
     func startAnimation()
     
+    /// 动画结束
     func stopAnimation()
     
 }

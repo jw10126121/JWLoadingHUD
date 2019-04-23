@@ -8,7 +8,7 @@
 import UIKit
 
 /// 自定义指示器
-public class JWProgressHUDCustomView: UIView {
+public class JWLoadingCustomView: UIView {
     
     public var isLoading: Bool = true {
         didSet {
@@ -46,8 +46,8 @@ public class JWProgressHUDCustomView: UIView {
     }()
     
     /// 加载图
-    public lazy var loadingView: JWProgressAnimatedView = {
-        let view = JWProgressAnimatedView()
+    public lazy var loadingView: JWLoadingAnimatedView = {
+        let view = JWLoadingAnimatedView()
         view.radius = 18
         view.strokeColor = .white
         view.strokeThickness = 2
