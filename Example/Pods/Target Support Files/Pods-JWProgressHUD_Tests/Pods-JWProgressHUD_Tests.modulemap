@@ -1,0 +1,6 @@
+framework module Pods_JWProgressHUD_Tests {
+  umbrella header "Pods-JWProgressHUD_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
