@@ -1,7 +1,7 @@
 {
   "name": "JWLoadingHUD",
   "version": "0.0.1",
-  "summary": "JWProgressHUD.指示器",
+  "summary": "JWLoadingHUD.指示器",
   "homepage": "https://github.com/jw10126121/JWLoadingHUD",
   "license": {
     "type": "MIT",

@@ -1,6 +1,6 @@
 //
 //  HUDLoadingViewable.swift
-//  JWProgressHUD
+//  JWLoadingHUD
 //
 //  Created by linjw on 2019/4/23.
 //
@@ -8,7 +8,7 @@
 import Foundation
 
 /// 加载中视图协议
-public protocol HUDLoadingViewable {
+public protocol JWLoadingAnimatedViewable {
     
     /// 动画开始
     func startAnimation()

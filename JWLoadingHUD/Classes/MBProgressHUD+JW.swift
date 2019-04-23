@@ -1,6 +1,6 @@
 //
 //  MBProgressHUD+JW.swift
-//  JWProgressHUD
+//  JWLoadingHUD
 //
 //  Created by LjwMac on 2019/4/21.
 //
@@ -11,19 +11,19 @@ import MBProgressHUD
 
 internal extension MBProgressHUD {
     
-    func setup(config: JWHUDStyle) {
+    func setup(style: JWHUDStyle) {
         
         /// 隐藏后移除
          removeFromSuperViewOnHide = true
          isSquare = false
         
-         isUserInteractionEnabled = !config.isUserInteractionEnabled
-         margin = config.minInsetMargin
-         offset = config.offset
-         bezelView.color = config.backgroundColor
-         bezelView.layer.cornerRadius = config.cornerRadius
-         label.font = config.textFont
-         minSize = config.minSize
+         isUserInteractionEnabled = !style.isUserInteractionEnabled
+         margin = style.minInsetMargin
+         offset = style.offset
+         bezelView.color = style.backgroundColor
+         bezelView.layer.cornerRadius = style.cornerRadius
+         label.font = style.textFont
+         minSize = style.minSize
         
     }
     
@@ -33,17 +33,9 @@ internal extension MBProgressHUD {
         return self
     }
     
-    @discardableResult func showInMainThread(animated: Bool = true) -> MBProgressHUD {
-        
-        DispatchQueue.main.async(execute: {
-            if self.superview != nil {
-                self.show(animated: animated)
-            }
-        })
-        return self
-    }
-    
-    @discardableResult func show(in view: UIView? = UIApplication.shared.keyWindow, animated: Bool = true, hiddenDelay: TimeInterval = 0) -> MBProgressHUD {
+    @discardableResult func show(in view: UIView? = UIApplication.shared.keyWindow,
+                                 animated: Bool = true,
+                                 hiddenDelay: TimeInterval = 0) -> MBProgressHUD {
         
         if let view = view {
             

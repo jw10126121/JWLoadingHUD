@@ -1,6 +1,6 @@
 //
-//  UIView+JWProgressHUD.swift
-//  JWProgressHUD
+//  UIView+JWLoadingHUD.swift
+//  JWLoadingHUD
 //
 //  Created by linjw on 2019/4/23.
 //
@@ -12,68 +12,78 @@ import ObjectiveC
 public extension UIView {
     
     /// 显示Toast
-    func showHUD(config: JWHUDStyle = JWHUDStyle.defaultConfig,
+    func showHUD(style: JWHUDStyle = JWHUDManager.shared.defaultStyle,
                  mode: JWHUDMode,
                  animated: Bool = true,
                  hiddenDelay: TimeInterval = 0) {
         
-        let customV = customView(config: config)
-        let hud = MBProgressHUD(view: self)
-        hud.isHidden = true
-        hud.setup(config: config)
-        addSubview(hud)
-        bringSubviewToFront(hud)
+        self.loadingHUDer.show(config: style, mode: mode, animated: animated, hiddenDelay: hiddenDelay)
         
-        hud.mode = .customView
-        hud.customView = customV
-        configHUDCustomView(customView: customV, mode: mode)
-        
-        hud.show(in: self, animated: animated, hiddenDelay: hiddenDelay)
+        //        let hud = MBProgressHUD(view: self)
+        //        showMBHUD(hud, config: config, mode: mode, animated: animated, hiddenDelay: hiddenDelay)
         
     }
     
     func dismissHUD(animated: Bool = true, afterDelay: TimeInterval = 0) {
         
+        //        guard let activeHud = activeHUDs.firstObject as? MBProgressHUD else { return }
+        //        dismissMBHUD(hud: activeHud, animated: animated, afterDelay: afterDelay)
+        
+        self.loadingHUDer.dismiss(animated: animated, afterDelay: afterDelay)
+        
     }
     
+    private func dismissAllHUD(animated: Bool = true, afterDelay: TimeInterval = 0) {
+        activeHUDs.compactMap { $0 as? MBProgressHUD }
+            .forEach { dismissMBHUD(hud: $0, animated: animated) }
+    }
+    
+    private func showMBHUD(_ hud: MBProgressHUD,
+                           style: JWHUDStyle = JWHUDManager.shared.defaultStyle,
+                           mode: JWHUDMode,
+                           animated: Bool = true,
+                           hiddenDelay: TimeInterval = 0) {
+        
+
+        let customV = customView(style: style)
+        hud.animationType = .zoom
+        hud.isHidden = true
+        hud.setup(style: style)
+        
+        hud.mode = .customView
+        hud.customView = customV
+        configHUDCustomView(customView: customV, mode: mode)
+        
+        addSubview(hud)
+        bringSubviewToFront(hud)
+        
+        hud.show(in: self, animated: animated, hiddenDelay: hiddenDelay)
+        
+        
+    }
+    
+    
+    private func dismissMBHUD(hud: UIView?, animated: Bool = true, afterDelay: TimeInterval = 0) {
+        if let hud = hud as? MBProgressHUD {
+            hud.dismiss(animated: animated)
+        }
+    }
+    
+    
     /// 通过配置，生成自定义视图
-    private func customView(config: JWHUDStyle) -> JWLoadingCustomView {
+    private func customView(style: JWHUDStyle) -> JWLoadingCustomView {
         let view = JWLoadingCustomView()
-        view.titleLabel.font = config.textFont
-        view.contentMargin = config.contentSpacing
-        view.titleLabel.textColor = config.textColor
-        view.titleLabel.numberOfLines = config.textLine
+        view.titleLabel.font = style.textFont
+        view.contentMargin = style.contentSpacing
+        view.titleLabel.textColor = style.textColor
+        view.titleLabel.numberOfLines = style.textLine
         return view
     }
     
     /// 配置 JWLoadingCustomView
     private func configHUDCustomView(customView: JWLoadingCustomView, mode: JWHUDMode) {
         
-        switch mode {
-        case .loading(let text):
-            customView.loadingView.isHidden = false
-            customView.iconImageView.isHidden = true
-            
-            customView.titleLabel.isHidden = (text?.isEmpty != false)
-            customView.titleLabel.text = text
-            
-            customView.isLoading = true
-            
-            break
-        case .imageText(let image, let text):
-            customView.loadingView.isHidden = true
-            customView.iconImageView.isHidden = false
-            
-            customView.titleLabel.isHidden = (text?.isEmpty != false)
-            customView.titleLabel.text = text
-            
-            customView.iconImageView.image = image
-            
-            customView.isLoading = false
-            
-            break
-        }
-        
+        customView.mode = mode
     }
     
     
@@ -121,3 +131,4 @@ extension UIView {
     }
     
 }
+

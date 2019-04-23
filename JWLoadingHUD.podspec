@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
     s.name             = 'JWLoadingHUD'
     s.version          = '0.0.1'
-    s.summary          = 'JWProgressHUD.指示器'
+    s.summary          = 'JWLoadingHUD.指示器'
     s.homepage         = 'https://github.com/jw10126121/JWLoadingHUD'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'jw10126121' => '10126121@qq.com' }

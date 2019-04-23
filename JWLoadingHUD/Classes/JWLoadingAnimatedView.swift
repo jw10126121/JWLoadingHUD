@@ -1,6 +1,6 @@
 //
 //  JWProgressAnimatedView.swift
-//  JWProgressHUD
+//  JWLoadingHUD
 //
 //  Created by linjw on 2019/4/23.
 //
@@ -139,7 +139,7 @@ public class JWLoadingAnimatedView: UIView {
     
 }
 
-extension JWLoadingAnimatedView: HUDLoadingViewable {
+extension JWLoadingAnimatedView: JWLoadingAnimatedViewable {
     
     /// 动画开始
     public func startAnimation() {

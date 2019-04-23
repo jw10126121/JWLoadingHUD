@@ -1,6 +1,6 @@
 //
 //  HUDConfig.swift
-//  JWProgressHUD
+//  JWLoadingHUD
 //
 //  Created by linjw on 2019/4/23.
 //
@@ -10,12 +10,6 @@ import ObjectiveC
 
 /// HUD配置
 public class JWHUDStyle: NSObject {
-    
-    /// 默认配置
-    static public let defaultConfig: JWHUDStyle = JWHUDStyle()
-    
-    /// 模式
-    public var mode: JWHUDMode = .loading(nil)
     
     /// 是否背景可点
     public var isUserInteractionEnabled: Bool = true
@@ -30,7 +24,7 @@ public class JWHUDStyle: NSObject {
     public var offset: CGPoint = CGPoint.zero
     
     /// 背景色
-    public var backgroundColor: UIColor = UIColor(white: 0, alpha: 1.0)
+    public var backgroundColor: UIColor = UIColor(white: 0, alpha: 0.8)
     
     /// 圆角
     public var cornerRadius: CGFloat = 4.0

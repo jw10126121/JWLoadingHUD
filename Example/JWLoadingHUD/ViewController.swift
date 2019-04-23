@@ -7,16 +7,16 @@
 //
 
 import UIKit
-import MBProgressHUD
 import JWLoadingHUD
 
 class ViewController: UIViewController {
     
-    lazy var titles = ["普通(加载图+字, 背景可操作)",
-                       "普通(图文, 背景可操作)",
-                       "普通(图, 背景可操作)",
-                       "普通(文, 背景可操作)",
-                       "多层(加载图+字, 背景可操作)"
+    lazy var titles = ["显示(加载图+字, 背景可操作)",
+                       "显示(图文, 背景可操作)",
+                       "显示(图, 背景可操作)",
+                       "显示(文, 背景可操作)",
+                       "显示(加载图+字, 背景不可操作, 3s后隐藏)",
+                       "隐藏",
     ]
     
     lazy var listView: UITableView = {
@@ -71,46 +71,41 @@ extension ViewController: UITableViewDelegate {
         switch indexPath.row {
         case 0:
             
-            view.hudManager.show(mode: JWHUDMode.loading("正在加载正在加载正在加载正在加载正在加载正在加载"),
+            view.showHUD(mode: JWHUDMode.loading("正在加载正在加载正在加载正在加载正在加载正在加载"),
                                  hiddenDelay: 2.0)
             
             break
         case 1:
-            view.hudManager.show(mode: JWHUDMode.imageText(UIImage(named: "LoadingHUDSuccess"), "加载成功"),
+            view.showHUD(mode: JWHUDMode.imageText(UIImage(named: "LoadingSuccessHUD"), "加载成功"),
                                  hiddenDelay: 2.0)
             break
         case 2:
-            view.hudManager.show(mode: JWHUDMode.imageText(UIImage(named: "LoadingHUDFail"), nil),
+            view.showHUD(mode: JWHUDMode.imageText(UIImage(named: "LoadingFailHUD"), nil),
                                  hiddenDelay: 2.0)
             break
         case 3:
             
             let config = JWHUDStyle()
-            config.mode = JWHUDMode.imageText(nil, "加载文字")
             config.minSize = CGSize(width: 140, height: 120)
             config.backgroundColor = UIColor(white: 0, alpha: 0.95)
-            view.showHUD(config: config,
+            view.showHUD(style: config,
                          mode: JWHUDMode.imageText(nil, "加载文字"),
                          hiddenDelay: 2.0)
             
             break
             
         case 4:
-            view.showHUD(mode: JWHUDMode.loading("正在加载正在加载正在加载正在加载正在加载正在加载"),
-                         animated: true,
-                         hiddenDelay: 5.0)
             
-            view.showHUD(mode: JWHUDMode.imageText(UIImage(named: "LoadingHUDSuccess"), "加载成功加载成功"),
-                         animated: true,
-                         hiddenDelay: 3.5)
-            
-            
-            view.showHUD(mode: JWHUDMode.imageText(nil, "正在加载"),
-                         animated: true,
-                         hiddenDelay: 2.0)
+            let config = JWHUDStyle()
+            config.isUserInteractionEnabled = false
+            view.showHUD(style: config,
+                         mode: JWHUDMode.loading("正在加载"),
+                         hiddenDelay: 3.0)
             
             break
-            
+        case 5:
+            view.dismissHUD(animated: true, afterDelay: 0.0)
+            break
         default:
             break
         }

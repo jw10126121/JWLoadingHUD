@@ -1,6 +1,6 @@
 //
 //  ProgressHUDCustomView.swift
-//  JWProgressHUD
+//  JWLoadingHUD
 //
 //  Created by linjw on 2019/4/23.
 //
@@ -10,6 +10,39 @@ import UIKit
 /// 自定义指示器
 public class JWLoadingCustomView: UIView {
     
+    /// 保存mode
+    public var mode: JWHUDMode =  .loading(nil) {
+        didSet {
+            let customView = self
+            switch mode {
+            case .loading(let text):
+                
+                customView.loadingView.isHidden = false
+                customView.iconImageView.isHidden = true
+                
+                customView.titleLabel.isHidden = (text?.isEmpty != false)
+                customView.titleLabel.text = text
+                
+                customView.isLoading = true
+                
+                break
+            case .imageText(let image, let text):
+                customView.loadingView.isHidden = true
+                customView.iconImageView.isHidden = false
+                
+                customView.titleLabel.isHidden = (text?.isEmpty != false)
+                customView.titleLabel.text = text
+                
+                customView.iconImageView.image = image
+                
+                customView.isLoading = false
+                
+                break
+            }
+        }
+    }
+    
+    /// 加载
     public var isLoading: Bool = true {
         didSet {
             if loadingView.superview != nil, !isLoading {
