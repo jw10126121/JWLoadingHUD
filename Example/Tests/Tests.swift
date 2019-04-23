@@ -1,5 +1,5 @@
 import XCTest
-import JWProgressHUD
+import JWLoadingHUD
 
 class Tests: XCTestCase {
     

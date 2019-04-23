@@ -48,7 +48,7 @@ public class JWLoadingAnimatedView: UIView {
     private lazy var maskLayer: CALayer = {
         let maskLayer = CALayer();
         let currentBundle = Bundle(for: type(of: self))
-        let bundlePath = currentBundle.path(forResource: "JWProgressHUD", ofType: ".bundle") ?? ""
+        let bundlePath = currentBundle.path(forResource: "JWLoadingHUD", ofType: ".bundle") ?? ""
         let path = Bundle(path: bundlePath)?.path(forResource: "angle-mask", ofType: "png") ?? ""
         maskLayer.contents = UIImage(contentsOfFile: path)?.cgImage
         return maskLayer

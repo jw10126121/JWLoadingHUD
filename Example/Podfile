@@ -1,15 +1,14 @@
 use_frameworks!
 platform :ios, '9.0'
 
-target 'JWProgressHUD_Example' do
-  pod 'JWProgressHUD', :path => '../'
+target 'JWLoadingHUD_Example' do
+  pod 'JWLoadingHUD', :path => '../'
   pod 'Toast-Swift', '~> 5.0.0'
   pod 'SVProgressHUD'
-
-  target 'JWProgressHUD_Tests' do
+  
+  target 'JWLoadingHUD_Tests' do
     inherit! :search_paths
 
     
   end
-  
 end
