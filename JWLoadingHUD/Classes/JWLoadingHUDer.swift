@@ -68,7 +68,7 @@ public class JWLoadingHUDer {
         containerView.hud.customView = hudContainerView
         containerView.hud.animationType = .zoom
         
-        containerView.hud.isUserInteractionEnabled = !style.isUserInteractionEnabled
+        containerView.hud.isUserInteractionEnabled = !style.markType.isUserInteractionEnabled
         containerView.hud.margin = style.minInsetMargin
         containerView.hud.offset = style.offset
         containerView.hud.bezelView.color = style.backgroundColor

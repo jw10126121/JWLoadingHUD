@@ -17,6 +17,7 @@
   "platforms": {
     "ios": "9.0"
   },
+  "frameworks": "QuartzCore",
   "source_files": "JWLoadingHUD/Classes/**/*",
   "resources": "JWLoadingHUD/JWLoadingHUD.bundle",
   "swift_versions": [

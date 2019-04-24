@@ -17,6 +17,9 @@ class ViewController: UIViewController {
                        "显示(文, 背景可操作)",
                        "显示(加载图+字, 背景不可操作, 3s后隐藏)",
                        "隐藏",
+                       "显示背景蒙层(颜色)",
+                       "显示背景蒙层(渐变色)",
+                       "显示背景蒙层(高斯模糊)",
     ]
     
     lazy var listView: UITableView = {
@@ -80,15 +83,19 @@ extension ViewController: UITableViewDelegate {
                                  hiddenDelay: 2.0)
             break
         case 2:
-            view.showHUD(mode: JWHUDMode.imageText(UIImage(named: "LoadingFailHUD"), nil),
-                                 hiddenDelay: 2.0)
+
+            let config = JWHUDStyle()
+            config.minSize = CGSize(width: 140, height: 120)
+            config.backgroundColor = UIColor(white: 0, alpha: 0.95)
+            view.showHUD(style: config,
+                         mode: JWHUDMode.imageText(UIImage(named: "LoadingFailHUD"), nil),
+                         hiddenDelay: 2.0)
             break
         case 3:
             
             let config = JWHUDStyle()
             config.minSize = CGSize(width: 140, height: 120)
             config.backgroundColor = UIColor(white: 0, alpha: 0.95)
-            config.blurStyle = .dark
             view.showHUD(style: config,
                          mode: JWHUDMode.imageText(nil, "加载文字"),
                          hiddenDelay: 2.0)
@@ -98,7 +105,6 @@ extension ViewController: UITableViewDelegate {
         case 4:
             
             let config = JWHUDStyle()
-            config.isUserInteractionEnabled = false
             view.showHUD(style: config,
                          mode: JWHUDMode.loading("正在加载"),
                          hiddenDelay: 3.0)
@@ -107,6 +113,31 @@ extension ViewController: UITableViewDelegate {
         case 5:
             view.dismissHUD(animated: true, afterDelay: 0.0)
             break
+        case 6:
+            
+            let config = JWHUDStyle()
+            config.markType = .color(UIColor.red.withAlphaComponent(0.2), isUserInteractionEnabled: true)
+            view.showHUD(style: config,
+                         mode: JWHUDMode.loading("正在加载"),
+                         hiddenDelay: 3.0)
+            break
+        case 7:
+            
+            let config = JWHUDStyle()
+            config.markType = JWLoadingHUDMarkType.darkGradient
+            view.showHUD(style: config,
+                         mode: JWHUDMode.loading("正在加载"),
+                         hiddenDelay: 3.0)
+            break
+        case 8:
+            
+            let config = JWHUDStyle()
+            config.markType = .blur(style: UIBlurEffect.Style.light, tintColor: UIColor.red.withAlphaComponent(0.2))
+            view.showHUD(style: config,
+                         mode: JWHUDMode.loading("正在加载"),
+                         hiddenDelay: 3.0)
+            break
+            
         default:
             break
         }

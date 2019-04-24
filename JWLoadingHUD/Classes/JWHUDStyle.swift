@@ -13,13 +13,7 @@ public class JWHUDStyle: NSObject {
     
     
     ///  背景蒙层类型
-    public var markType: JWLoadingHUDMarkType = .default
-    
-    /// 背景效果
-    public var blurStyle: UIBlurEffect.Style = .extraLight
-    
-    /// 是否背景可点
-    public var isUserInteractionEnabled: Bool = true
+    public var markType: JWLoadingHUDMarkType = .defaultMarkType
     
     /// 四边最小边距
     public var minInsetMargin: CGFloat = 20
@@ -30,7 +24,7 @@ public class JWHUDStyle: NSObject {
     /// 内容偏移
     public var offset: CGPoint = CGPoint.zero
     
-    /// 背景色
+    /// HUD背景色
     public var backgroundColor: UIColor = UIColor(white: 0, alpha: 0.8)
     
     /// 圆角
@@ -51,12 +45,41 @@ public class JWHUDStyle: NSObject {
     
 }
 
-public enum JWLoadingHUDMarkType: Int {
+public enum JWLoadingHUDMarkType {
     
-    /// 默认
-    case `default`
-    /// 黑色渐变
-    case darkGradient
-    /// 自定义
-    case custom
+    /// 固定颜色
+    case color(UIColor?, isUserInteractionEnabled: Bool)
+    /// 黑色渐变(背景黑色渐变，不可点击)
+    case darkGradient(UIColor, isUserInteractionEnabled: Bool)
+    /// 高斯模糊(背景模糊，不可点击)
+    case blur(style: UIBlurEffect.Style, tintColor: UIColor?)
+    
+    
+    /// 默认配置
+    public static let defaultMarkType = JWLoadingHUDMarkType.color(MarkDefaultColor.defaultMarkColor, isUserInteractionEnabled: true)
+    
+    /// 默认渐变配置
+    public static let darkGradient = JWLoadingHUDMarkType.darkGradient(MarkDefaultColor.darkGradient, isUserInteractionEnabled: false)
+    
+    
+    private struct MarkDefaultColor {
+        static let defaultMarkColor = UIColor.clear
+        static let darkGradient: UIColor = UIColor(white: 0, alpha: 0.4)
+    }
+
+    
+    /// 是否可操作
+    internal var isUserInteractionEnabled: Bool {
+        switch self {
+        case let .color(_, isUserInteractionEnabled: enable):
+            return enable
+        case let .darkGradient(_, isUserInteractionEnabled: enable):
+            return enable
+        default:
+            return false
+        }
+    }
+    
+    
+    
 }

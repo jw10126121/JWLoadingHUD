@@ -5,7 +5,7 @@ target 'JWLoadingHUD_Example' do
   pod 'JWLoadingHUD', :path => '../'
   pod 'Toast-Swift', '~> 5.0.0'
   pod 'SVProgressHUD'
-  
+
   target 'JWLoadingHUD_Tests' do
     inherit! :search_paths
 

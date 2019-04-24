@@ -16,11 +16,8 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'https://github.com/jw10126121/JWLoadingHUD.git', :tag => s.version.to_s }
     s.ios.deployment_target = '9.0'
 
-    #s.framework    = 'QuartzCore'
+    s.framework    = 'QuartzCore'
     s.source_files = 'JWLoadingHUD/Classes/**/*'
-    #s.resource_bundles = {
-    #    'JWLoadingHUD' => ['JWLoadingHUD/Assets/*.png']
-    #}
     s.resources    = 'JWLoadingHUD/JWLoadingHUD.bundle'
     s.swift_versions = ['4.2', '5.0'] # 同时支持4.2和5.0
     s.dependency 'MBProgressHUD', '~> 1.1.0'
