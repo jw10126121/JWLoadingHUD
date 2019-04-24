@@ -7,33 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01EC16D5A7876C6D3C32CD5871070865 /* JWLoadingHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DC5D206FF5908CC6F9210E1FE5DF6A2 /* JWLoadingHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03682F010C99C6C3E2D9BEFA76726B36 /* JWHUDStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D2DBCDF27E246E98A691B807B5913 /* JWHUDStyle.swift */; };
-		16CC8CF56512F399B8A666ABB1D1A01C /* JWLoadingHUDGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0200A0B691985684672B1196762692 /* JWLoadingHUDGradientLayer.swift */; };
-		2048D17B2C2E112E2E90A95673A10F46 /* JWHUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A803B3FBE2CD213B90DB78A324D1F79 /* JWHUDManager.swift */; };
+		00F31F59D030B7219A0373B5D6EF405C /* JWLoadingHUDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087CEE60659503610B096BB7FBEB3D22 /* JWLoadingHUDHelper.swift */; };
+		01EC16D5A7876C6D3C32CD5871070865 /* JWLoadingHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07B22E9432EACEF5BB7CC25183AC8A4A /* JWLoadingHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		064B7EF6E99A8F76732536D3F2985D6C /* JWLoadingCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EE2C7ED702F91396F9BC541ACFECB9 /* JWLoadingCustomView.swift */; };
 		2C2194204E2DEE0D76BE5F76EFF2B5DF /* Pods-JWLoadingHUD_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED723D2C4941848C326FBDBD029E66EB /* Pods-JWLoadingHUD_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32E8F96C0EC4B5B38D8E2A25712F1223 /* Pods-JWLoadingHUD_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 878C9692BE740064452C5D4976585F38 /* Pods-JWLoadingHUD_Example-dummy.m */; };
 		34E1D03D619F5A72DEF727054B1FC011 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6152B0CD59AAF2557B3AA4375B61BEED /* MBProgressHUD.m */; };
 		46E9F2405093C63C4368FFD3C5A04A5C /* Pods-JWLoadingHUD_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DE38D39AB18D7CBAE82AF7B6E0EFDEBD /* Pods-JWLoadingHUD_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		480E0114D8EEB448B96973E2CC0336D8 /* UIView+JWLoadingHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB89EB2696A6E5E9DE0D59C6CC1E920 /* UIView+JWLoadingHUD.swift */; };
+		48536A0A6DE9A64D9BD1B28180983FF3 /* JWLoadingHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25090A26369CF9F36643E9F12C9CD7EC /* JWLoadingHUD-dummy.m */; };
+		491223CE4E783B719CD02CF353EF272E /* JWLoadingAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51035A2ACB9BF805FB5C9FA802F28153 /* JWLoadingAnimatedView.swift */; };
 		4C2BBFEA0A1207D18233B34FF77C6044 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E6584E1984A3CC79C447B818C6F79920 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		564FAFBA5535428EC5227EE742C7EA81 /* MBProgressHUD+JW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967AFC477371831BEA6C3BF6797E000 /* MBProgressHUD+JW.swift */; };
+		4FDA419B7BE10905A36BFBC281911CE9 /* JWLoadingAnimatedViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2173DCB5175CD4E89C143407FEDC3B10 /* JWLoadingAnimatedViewable.swift */; };
 		581B2EFCBC9AC22165CA7A36D65F668B /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56452E004419B9A637AC8D1455D07312 /* MBProgressHUD.framework */; };
-		6168A06D09CACE57FFA80C881C64A193 /* JWLoadingHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B08575516AE684289BFF31AF6B31AF9 /* JWLoadingHUD-dummy.m */; };
 		638DCD06CFD83121C2322805CE40DDFC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06E8A45132D11BF9312E6C4F95B1126 /* QuartzCore.framework */; };
+		745FD3AB0D568856D1E97CAFF7862681 /* JWHUDStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F743B83320C334460F258577FD675 /* JWHUDStyle.swift */; };
 		7F7261186BE6F0D2095EDC10B9205885 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7EED94334B6354428DDDE46CD744585 /* Foundation.framework */; };
 		8EEFE222FD5BFE752DC23ADA9EA847DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E67361F3758F2E58FCD778A29C8B198 /* CoreGraphics.framework */; };
 		956042585A0075877467C8FDB6B030DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7EED94334B6354428DDDE46CD744585 /* Foundation.framework */; };
 		AB2A9D61A0F07BDE4C1F5BDEDFD3DA27 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 657678C8C3FB4725CEE10D8E8607F1EE /* MBProgressHUD-dummy.m */; };
-		AB5B9AD8847C46083A6D95C94FBEBB13 /* JWLoadingAnimatedViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20BB2847EB802E6A3E184C1C0330C81 /* JWLoadingAnimatedViewable.swift */; };
-		BEBE819E5D33F133DDE33BD592B96F18 /* JWLoadingCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7C08E8D845F16AC9172003030C3A87 /* JWLoadingCustomView.swift */; };
 		C846E360E87A5562EDE97561450B0D54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7EED94334B6354428DDDE46CD744585 /* Foundation.framework */; };
-		D5AA2318CC8BD6850B26734AE3EFE7F2 /* JWLoadingAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B74357D2A37975B606FC53E958172 /* JWLoadingAnimatedView.swift */; };
-		E3D17B089FEAF0278C89398EB4A7F3F8 /* JWLoadingHUDer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96007C52DC501BC3C61BE54205B5A4E8 /* JWLoadingHUDer.swift */; };
-		E3DE6CA1EF69C3E8430D956B2D84DF8B /* JWLoadingHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 838938FF92AF158F4281C219A43CBE2B /* JWLoadingHUD.bundle */; };
+		D3E2CF4B32A7AC76006C0C05F790D80F /* UIView+JWLoadingHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04EA8B1FB2F2106AFB813B7697D1F0 /* UIView+JWLoadingHUD.swift */; };
+		E3DE6CA1EF69C3E8430D956B2D84DF8B /* JWLoadingHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D549A2C938F0B5EA5E58C1E57FE40 /* JWLoadingHUD.bundle */; };
 		E6E2969BE6F0671A94269181AC80D868 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06E8A45132D11BF9312E6C4F95B1126 /* QuartzCore.framework */; };
 		E7B673303DA0B61F9D1B3786FA2A1F29 /* Pods-JWLoadingHUD_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FF167582299D38D9BA591ECD03A8A2 /* Pods-JWLoadingHUD_Tests-dummy.m */; };
 		EA2A243B54DA5A7C9DECE8E29091CDF2 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 071047A4A08135548333750E08C06DA7 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F171B264CB6C9818AD8FDB54894A44BD /* JWMBProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18252AC55B87D99984624DCD028BF29F /* JWMBProgressHUD.swift */; };
+		F3FC16ABE438C4D3DBA6D3FBD289B006 /* JWHUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F8679850E19D5E7A5FC2F7E8F8BDAD /* JWHUDManager.swift */; };
+		F6B688CFE893C6AB3C8CBE436C5D59C5 /* JWLoadingHUDGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3A9C66FB817381FBAE4BE6497D707D /* JWLoadingHUDGradientLayer.swift */; };
 		FC4C8AEFEEBB983F464E1426CF415730 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7EED94334B6354428DDDE46CD744585 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,57 +70,57 @@
 
 /* Begin PBXFileReference section */
 		017EBE76BA9E3BF954798BCC77D009B0 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A8FA3AC4B44DFD12574938405291FB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		071047A4A08135548333750E08C06DA7 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
-		096186A86F85E4CAF21CFF01B61A47B4 /* JWLoadingHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JWLoadingHUD.xcconfig; sourceTree = "<group>"; };
-		0967AFC477371831BEA6C3BF6797E000 /* MBProgressHUD+JW.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MBProgressHUD+JW.swift"; path = "JWLoadingHUD/Classes/MBProgressHUD+JW.swift"; sourceTree = "<group>"; };
+		07B22E9432EACEF5BB7CC25183AC8A4A /* JWLoadingHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JWLoadingHUD-umbrella.h"; sourceTree = "<group>"; };
+		087CEE60659503610B096BB7FBEB3D22 /* JWLoadingHUDHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWLoadingHUDHelper.swift; path = JWLoadingHUD/Classes/JWLoadingHUDHelper.swift; sourceTree = "<group>"; };
+		0C3A9C66FB817381FBAE4BE6497D707D /* JWLoadingHUDGradientLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWLoadingHUDGradientLayer.swift; path = JWLoadingHUD/Classes/JWLoadingHUDGradientLayer.swift; sourceTree = "<group>"; };
 		0E67361F3758F2E58FCD778A29C8B198 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		0F2D549A2C938F0B5EA5E58C1E57FE40 /* JWLoadingHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = JWLoadingHUD.bundle; path = JWLoadingHUD/JWLoadingHUD.bundle; sourceTree = "<group>"; };
 		14EFF480987D3E9B1C6C2AE0B0196F91 /* Pods-JWLoadingHUD_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JWLoadingHUD_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1C0200A0B691985684672B1196762692 /* JWLoadingHUDGradientLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWLoadingHUDGradientLayer.swift; path = JWLoadingHUD/Classes/JWLoadingHUDGradientLayer.swift; sourceTree = "<group>"; };
-		265B74357D2A37975B606FC53E958172 /* JWLoadingAnimatedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWLoadingAnimatedView.swift; path = JWLoadingHUD/Classes/JWLoadingAnimatedView.swift; sourceTree = "<group>"; };
-		2A803B3FBE2CD213B90DB78A324D1F79 /* JWHUDManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWHUDManager.swift; path = JWLoadingHUD/Classes/JWHUDManager.swift; sourceTree = "<group>"; };
-		2B08575516AE684289BFF31AF6B31AF9 /* JWLoadingHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JWLoadingHUD-dummy.m"; sourceTree = "<group>"; };
-		2BB89EB2696A6E5E9DE0D59C6CC1E920 /* UIView+JWLoadingHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+JWLoadingHUD.swift"; path = "JWLoadingHUD/Classes/UIView+JWLoadingHUD.swift"; sourceTree = "<group>"; };
+		18252AC55B87D99984624DCD028BF29F /* JWMBProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWMBProgressHUD.swift; path = JWLoadingHUD/Classes/JWMBProgressHUD.swift; sourceTree = "<group>"; };
+		2173DCB5175CD4E89C143407FEDC3B10 /* JWLoadingAnimatedViewable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWLoadingAnimatedViewable.swift; path = JWLoadingHUD/Classes/JWLoadingAnimatedViewable.swift; sourceTree = "<group>"; };
+		25090A26369CF9F36643E9F12C9CD7EC /* JWLoadingHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JWLoadingHUD-dummy.m"; sourceTree = "<group>"; };
+		3109DB313E474DE36C68334323E13964 /* JWLoadingHUD.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = JWLoadingHUD.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		314A8B77E12FA60EC7A3A26BD6902E97 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		31EE2C7ED702F91396F9BC541ACFECB9 /* JWLoadingCustomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWLoadingCustomView.swift; path = JWLoadingHUD/Classes/JWLoadingCustomView.swift; sourceTree = "<group>"; };
 		37ABD8DCAA991ADD9AA4DDA40D85379D /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
-		3EE8ABB6499446A8CAE28EDEDF23D88E /* JWLoadingHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JWLoadingHUD.modulemap; sourceTree = "<group>"; };
 		417A1377FEDED70B2A2557BEF24FE80F /* Pods-JWLoadingHUD_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JWLoadingHUD_Example-frameworks.sh"; sourceTree = "<group>"; };
 		4675BD7C3D50741550563EE1D005B876 /* Pods-JWLoadingHUD_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JWLoadingHUD_Example.modulemap"; sourceTree = "<group>"; };
 		4A72CA38C3701739E95B7BBCE525F969 /* Pods-JWLoadingHUD_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JWLoadingHUD_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		51035A2ACB9BF805FB5C9FA802F28153 /* JWLoadingAnimatedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWLoadingAnimatedView.swift; path = JWLoadingHUD/Classes/JWLoadingAnimatedView.swift; sourceTree = "<group>"; };
 		56452E004419B9A637AC8D1455D07312 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		581574BBEA37BC8190207D39E437CB3F /* JWLoadingHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JWLoadingHUD-prefix.pch"; sourceTree = "<group>"; };
 		5B8A4F9F108A94856887736BA6997D07 /* Pods-JWLoadingHUD_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JWLoadingHUD_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5E75DBB047E2BCE803E425B440F188C4 /* Pods-JWLoadingHUD_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JWLoadingHUD_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6152B0CD59AAF2557B3AA4375B61BEED /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		619D2E1B8E7310902C83396D0E12E72A /* MBProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBProgressHUD-Info.plist"; sourceTree = "<group>"; };
 		657678C8C3FB4725CEE10D8E8607F1EE /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		6659B3C5337B2C4118225AB220423D06 /* Pods_JWLoadingHUD_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JWLoadingHUD_Example.framework; path = "Pods-JWLoadingHUD_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6CEDA5748830DB7732F3A6B785F731C3 /* JWLoadingHUD.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = JWLoadingHUD.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		705D2DBCDF27E246E98A691B807B5913 /* JWHUDStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWHUDStyle.swift; path = JWLoadingHUD/Classes/JWHUDStyle.swift; sourceTree = "<group>"; };
-		791C64E74F734D1A9E4E83B5BD34E18B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		838938FF92AF158F4281C219A43CBE2B /* JWLoadingHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = JWLoadingHUD.bundle; path = JWLoadingHUD/JWLoadingHUD.bundle; sourceTree = "<group>"; };
+		70F8679850E19D5E7A5FC2F7E8F8BDAD /* JWHUDManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWHUDManager.swift; path = JWLoadingHUD/Classes/JWHUDManager.swift; sourceTree = "<group>"; };
+		7EE1C12A09A03A72C8E3D5B692E10E34 /* JWLoadingHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JWLoadingHUD.xcconfig; sourceTree = "<group>"; };
 		850A5689B8D0DD519EB81552C842BF7E /* Pods-JWLoadingHUD_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JWLoadingHUD_Tests.modulemap"; sourceTree = "<group>"; };
 		850FF76381C7E65E1AF730D36F519546 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
 		86170DBFE98E146482386E5728A5FD8B /* JWLoadingHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JWLoadingHUD.framework; path = JWLoadingHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		878C9692BE740064452C5D4976585F38 /* Pods-JWLoadingHUD_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JWLoadingHUD_Example-dummy.m"; sourceTree = "<group>"; };
-		88BEAAEE6D6F4B5C82E5384539BFA12D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		8DC5D206FF5908CC6F9210E1FE5DF6A2 /* JWLoadingHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JWLoadingHUD-umbrella.h"; sourceTree = "<group>"; };
 		93FF167582299D38D9BA591ECD03A8A2 /* Pods-JWLoadingHUD_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JWLoadingHUD_Tests-dummy.m"; sourceTree = "<group>"; };
-		96007C52DC501BC3C61BE54205B5A4E8 /* JWLoadingHUDer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWLoadingHUDer.swift; path = JWLoadingHUD/Classes/JWLoadingHUDer.swift; sourceTree = "<group>"; };
 		97B23CECF04214C92B30BE2F75F990B6 /* Pods-JWLoadingHUD_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JWLoadingHUD_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		98EF526027B0365C90CB56FD02B8D31B /* JWLoadingHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JWLoadingHUD-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A97DFB64BE8494DC5A1FE927ED226235 /* JWLoadingHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JWLoadingHUD.modulemap; sourceTree = "<group>"; };
+		AD4F743B83320C334460F258577FD675 /* JWHUDStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWHUDStyle.swift; path = JWLoadingHUD/Classes/JWHUDStyle.swift; sourceTree = "<group>"; };
 		B007F53D5A00DB25A9AA9C7D65AD1838 /* Pods_JWLoadingHUD_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JWLoadingHUD_Tests.framework; path = "Pods-JWLoadingHUD_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06E8A45132D11BF9312E6C4F95B1126 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		B4EE5F2A29A386C0B09E61A804A035E7 /* Pods-JWLoadingHUD_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JWLoadingHUD_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B5C9328CF864C4CE3513BF004D4C93E4 /* Pods-JWLoadingHUD_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JWLoadingHUD_Example-Info.plist"; sourceTree = "<group>"; };
-		BA7C08E8D845F16AC9172003030C3A87 /* JWLoadingCustomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWLoadingCustomView.swift; path = JWLoadingHUD/Classes/JWLoadingCustomView.swift; sourceTree = "<group>"; };
+		C3DE1E743EDA7930D926E0207BF89EFE /* JWLoadingHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JWLoadingHUD-Info.plist"; sourceTree = "<group>"; };
 		CE86C18E56A3839CAD00733EC44AAA66 /* Pods-JWLoadingHUD_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JWLoadingHUD_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		D0BBEBC616C9F14458D053C07D3E9DFC /* Pods-JWLoadingHUD_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JWLoadingHUD_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D20BB2847EB802E6A3E184C1C0330C81 /* JWLoadingAnimatedViewable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWLoadingAnimatedViewable.swift; path = JWLoadingHUD/Classes/JWLoadingAnimatedViewable.swift; sourceTree = "<group>"; };
 		D7EED94334B6354428DDDE46CD744585 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DE38D39AB18D7CBAE82AF7B6E0EFDEBD /* Pods-JWLoadingHUD_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JWLoadingHUD_Tests-umbrella.h"; sourceTree = "<group>"; };
 		E6584E1984A3CC79C447B818C6F79920 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		E6DF5A3DE5E4595D73BE293DFD98948C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		EA66AAF1C0C84BF3C04FF45EBA2838A1 /* Pods-JWLoadingHUD_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JWLoadingHUD_Tests-Info.plist"; sourceTree = "<group>"; };
+		ED04EA8B1FB2F2106AFB813B7697D1F0 /* UIView+JWLoadingHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+JWLoadingHUD.swift"; path = "JWLoadingHUD/Classes/UIView+JWLoadingHUD.swift"; sourceTree = "<group>"; };
+		ED1470561DE56563A3014C0984212A7E /* JWLoadingHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JWLoadingHUD-prefix.pch"; sourceTree = "<group>"; };
 		ED723D2C4941848C326FBDBD029E66EB /* Pods-JWLoadingHUD_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JWLoadingHUD_Example-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,14 +175,6 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		18707974279C6BD2F19180C7C5E8379D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				838938FF92AF158F4281C219A43CBE2B /* JWLoadingHUD.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		2B017326FE2268A7F395CEFE79C36DCE /* Pods-JWLoadingHUD_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,20 +192,6 @@
 			path = "Target Support Files/Pods-JWLoadingHUD_Example";
 			sourceTree = "<group>";
 		};
-		3E8A2B82DF63C736CCC266E28A63B324 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3EE8ABB6499446A8CAE28EDEDF23D88E /* JWLoadingHUD.modulemap */,
-				096186A86F85E4CAF21CFF01B61A47B4 /* JWLoadingHUD.xcconfig */,
-				2B08575516AE684289BFF31AF6B31AF9 /* JWLoadingHUD-dummy.m */,
-				98EF526027B0365C90CB56FD02B8D31B /* JWLoadingHUD-Info.plist */,
-				581574BBEA37BC8190207D39E437CB3F /* JWLoadingHUD-prefix.pch */,
-				8DC5D206FF5908CC6F9210E1FE5DF6A2 /* JWLoadingHUD-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/JWLoadingHUD";
-			sourceTree = "<group>";
-		};
 		3F242479102E24C5847AB040CB8095A8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,34 +200,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		4D861B13AD3195576FCDB540A86EF49E /* Pod */ = {
+		94560C88312B2FAAE8528605159D5D86 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6CEDA5748830DB7732F3A6B785F731C3 /* JWLoadingHUD.podspec */,
-				88BEAAEE6D6F4B5C82E5384539BFA12D /* LICENSE */,
-				791C64E74F734D1A9E4E83B5BD34E18B /* README.md */,
+				A97DFB64BE8494DC5A1FE927ED226235 /* JWLoadingHUD.modulemap */,
+				7EE1C12A09A03A72C8E3D5B692E10E34 /* JWLoadingHUD.xcconfig */,
+				25090A26369CF9F36643E9F12C9CD7EC /* JWLoadingHUD-dummy.m */,
+				C3DE1E743EDA7930D926E0207BF89EFE /* JWLoadingHUD-Info.plist */,
+				ED1470561DE56563A3014C0984212A7E /* JWLoadingHUD-prefix.pch */,
+				07B22E9432EACEF5BB7CC25183AC8A4A /* JWLoadingHUD-umbrella.h */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JWLoadingHUD";
 			sourceTree = "<group>";
 		};
-		965B7760004DDBA488C43D829CF544D2 /* JWLoadingHUD */ = {
+		95D4FA3C80C6DC8D48695901E7E5B7E5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2A803B3FBE2CD213B90DB78A324D1F79 /* JWHUDManager.swift */,
-				705D2DBCDF27E246E98A691B807B5913 /* JWHUDStyle.swift */,
-				265B74357D2A37975B606FC53E958172 /* JWLoadingAnimatedView.swift */,
-				D20BB2847EB802E6A3E184C1C0330C81 /* JWLoadingAnimatedViewable.swift */,
-				BA7C08E8D845F16AC9172003030C3A87 /* JWLoadingCustomView.swift */,
-				96007C52DC501BC3C61BE54205B5A4E8 /* JWLoadingHUDer.swift */,
-				1C0200A0B691985684672B1196762692 /* JWLoadingHUDGradientLayer.swift */,
-				0967AFC477371831BEA6C3BF6797E000 /* MBProgressHUD+JW.swift */,
-				2BB89EB2696A6E5E9DE0D59C6CC1E920 /* UIView+JWLoadingHUD.swift */,
-				4D861B13AD3195576FCDB540A86EF49E /* Pod */,
-				18707974279C6BD2F19180C7C5E8379D /* Resources */,
-				3E8A2B82DF63C736CCC266E28A63B324 /* Support Files */,
+				0F2D549A2C938F0B5EA5E58C1E57FE40 /* JWLoadingHUD.bundle */,
 			);
-			name = JWLoadingHUD;
-			path = ../..;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		972C05D4ABF4AFE0028A9907AE29C8E3 /* Support Files */ = {
@@ -266,6 +236,16 @@
 			path = "../Target Support Files/MBProgressHUD";
 			sourceTree = "<group>";
 		};
+		A978BAC5A9A4857E89220C9342CD58EA /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				3109DB313E474DE36C68334323E13964 /* JWLoadingHUD.podspec */,
+				04A8FA3AC4B44DFD12574938405291FB /* LICENSE */,
+				E6DF5A3DE5E4595D73BE293DFD98948C /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		AEF93457C29E10344C45F44CEEDB4FC3 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,10 +255,30 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		B5B8E7CBFAE23A66509CC7BF64E99D92 /* JWLoadingHUD */ = {
+			isa = PBXGroup;
+			children = (
+				70F8679850E19D5E7A5FC2F7E8F8BDAD /* JWHUDManager.swift */,
+				AD4F743B83320C334460F258577FD675 /* JWHUDStyle.swift */,
+				51035A2ACB9BF805FB5C9FA802F28153 /* JWLoadingAnimatedView.swift */,
+				2173DCB5175CD4E89C143407FEDC3B10 /* JWLoadingAnimatedViewable.swift */,
+				31EE2C7ED702F91396F9BC541ACFECB9 /* JWLoadingCustomView.swift */,
+				0C3A9C66FB817381FBAE4BE6497D707D /* JWLoadingHUDGradientLayer.swift */,
+				087CEE60659503610B096BB7FBEB3D22 /* JWLoadingHUDHelper.swift */,
+				18252AC55B87D99984624DCD028BF29F /* JWMBProgressHUD.swift */,
+				ED04EA8B1FB2F2106AFB813B7697D1F0 /* UIView+JWLoadingHUD.swift */,
+				A978BAC5A9A4857E89220C9342CD58EA /* Pod */,
+				95D4FA3C80C6DC8D48695901E7E5B7E5 /* Resources */,
+				94560C88312B2FAAE8528605159D5D86 /* Support Files */,
+			);
+			name = JWLoadingHUD;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		BAEFD0A958DA606705A2F10BA5953CBD /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				965B7760004DDBA488C43D829CF544D2 /* JWLoadingHUD */,
+				B5B8E7CBFAE23A66509CC7BF64E99D92 /* JWLoadingHUD */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -442,7 +442,7 @@
 			buildConfigurationList = C152D369D8FC66BB484E9D82BCED8178 /* Build configuration list for PBXNativeTarget "JWLoadingHUD" */;
 			buildPhases = (
 				EB56D2E46AE5203F9197E17E5C6044C9 /* Headers */,
-				130C3E992A8D47C6CDD23D5725CE2CC4 /* Sources */,
+				DAC55F8341500186D89DDF33A42A1689 /* Sources */,
 				867AC233F16D6B8440ED6B73AF376F30 /* Frameworks */,
 				74C0933507F34C4E672107BF1D6D0456 /* Resources */,
 			);
@@ -518,23 +518,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		130C3E992A8D47C6CDD23D5725CE2CC4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2048D17B2C2E112E2E90A95673A10F46 /* JWHUDManager.swift in Sources */,
-				03682F010C99C6C3E2D9BEFA76726B36 /* JWHUDStyle.swift in Sources */,
-				D5AA2318CC8BD6850B26734AE3EFE7F2 /* JWLoadingAnimatedView.swift in Sources */,
-				AB5B9AD8847C46083A6D95C94FBEBB13 /* JWLoadingAnimatedViewable.swift in Sources */,
-				BEBE819E5D33F133DDE33BD592B96F18 /* JWLoadingCustomView.swift in Sources */,
-				6168A06D09CACE57FFA80C881C64A193 /* JWLoadingHUD-dummy.m in Sources */,
-				E3D17B089FEAF0278C89398EB4A7F3F8 /* JWLoadingHUDer.swift in Sources */,
-				16CC8CF56512F399B8A666ABB1D1A01C /* JWLoadingHUDGradientLayer.swift in Sources */,
-				564FAFBA5535428EC5227EE742C7EA81 /* MBProgressHUD+JW.swift in Sources */,
-				480E0114D8EEB448B96973E2CC0336D8 /* UIView+JWLoadingHUD.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2E3A19D849EF90343947400E862266B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -557,6 +540,23 @@
 			files = (
 				AB2A9D61A0F07BDE4C1F5BDEDFD3DA27 /* MBProgressHUD-dummy.m in Sources */,
 				34E1D03D619F5A72DEF727054B1FC011 /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC55F8341500186D89DDF33A42A1689 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3FC16ABE438C4D3DBA6D3FBD289B006 /* JWHUDManager.swift in Sources */,
+				745FD3AB0D568856D1E97CAFF7862681 /* JWHUDStyle.swift in Sources */,
+				491223CE4E783B719CD02CF353EF272E /* JWLoadingAnimatedView.swift in Sources */,
+				4FDA419B7BE10905A36BFBC281911CE9 /* JWLoadingAnimatedViewable.swift in Sources */,
+				064B7EF6E99A8F76732536D3F2985D6C /* JWLoadingCustomView.swift in Sources */,
+				48536A0A6DE9A64D9BD1B28180983FF3 /* JWLoadingHUD-dummy.m in Sources */,
+				F6B688CFE893C6AB3C8CBE436C5D59C5 /* JWLoadingHUDGradientLayer.swift in Sources */,
+				00F31F59D030B7219A0373B5D6EF405C /* JWLoadingHUDHelper.swift in Sources */,
+				F171B264CB6C9818AD8FDB54894A44BD /* JWMBProgressHUD.swift in Sources */,
+				D3E2CF4B32A7AC76006C0C05F790D80F /* UIView+JWLoadingHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,7 +788,7 @@
 		};
 		99A7511E02B03FC3456CF801AAC2D521 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 096186A86F85E4CAF21CFF01B61A47B4 /* JWLoadingHUD.xcconfig */;
+			baseConfigurationReference = 7EE1C12A09A03A72C8E3D5B692E10E34 /* JWLoadingHUD.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -912,7 +912,7 @@
 		};
 		CC81EFF0BA687B964BAF59B6A53FFA93 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 096186A86F85E4CAF21CFF01B61A47B4 /* JWLoadingHUD.xcconfig */;
+			baseConfigurationReference = 7EE1C12A09A03A72C8E3D5B692E10E34 /* JWLoadingHUD.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

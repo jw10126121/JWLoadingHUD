@@ -27,18 +27,38 @@ public extension UIView {
         
     }
     
+
+    
+    @objc private func didChangeStatusBarOrientationNotificationHandle(notification: Notification) {
+        
+        /// 当前状态栏方向
+        let currentIO = UIApplication.shared.statusBarOrientation
+        let deviceIO = interfaceOrientation(from: UIDevice.current.orientation)
+    
+        if deviceIO == .portrait {
+            UIView.animate(withDuration: 0.3) {
+                self.hud.bezelView.transform = transformRotationAngle(from: currentIO)
+            }
+        }
+
+    }
+    
     func dismissHUD(animated: Bool = true, afterDelay: TimeInterval = 0) {
         
+        if self.hud.hudStyle.isFollowStatusBarOrientation {
+            NotificationCenter.default.removeObserver(self, name: UIApplication.didChangeStatusBarOrientationNotification, object: nil)
+        }
+
         dismissMBHUD(hud: self.hud, animated: animated, afterDelay: afterDelay)
         
     }
     
     private func dismissAllHUD(animated: Bool = true, afterDelay: TimeInterval = 0) {
-        activeHUDs.compactMap { $0 as? MBProgressHUD }
+        activeHUDs.compactMap { $0 as? JWMBProgressHUD }
             .forEach { dismissMBHUD(hud: $0, animated: animated) }
     }
     
-    private func showMBHUD(_ hud: MBProgressHUD,
+    private func showMBHUD(_ hud: JWMBProgressHUD,
                            style: JWHUDStyle = JWHUDManager.shared.defaultStyle,
                            mode: JWHUDMode,
                            animated: Bool = true,
@@ -61,6 +81,18 @@ public extension UIView {
         if hud.superview != self { addSubview(hud) }
         bringSubviewToFront(hud)
         
+        hud.hudStyle = style
+        
+        if style.isFollowStatusBarOrientation {
+            NotificationCenter.default.addObserver(forName: UIApplication.didChangeStatusBarOrientationNotification,
+                                                   object: nil,
+                                                   queue: OperationQueue.main) { [weak self] notif in
+                                                    guard let self = self else { return }
+                                                    debugPrint("UIApplication.didChangeStatusBarOrientationNotification")
+                                                    self.didChangeStatusBarOrientationNotificationHandle(notification: notif)
+            }
+        }
+        
         hud.show(in: self, animated: animated, hiddenDelay: hiddenDelay)
         
         
@@ -68,7 +100,7 @@ public extension UIView {
     
     
     private func dismissMBHUD(hud: UIView?, animated: Bool = true, afterDelay: TimeInterval = 0) {
-        if let hud = hud as? MBProgressHUD {
+        if let hud = hud as? JWMBProgressHUD {
             hud.dismiss(animated: animated, afterDelay: afterDelay)
         }
     }
@@ -136,7 +168,7 @@ extension UIView {
     }
     
     /// HUD对象
-    internal var hud: MBProgressHUD {
+    internal var hud: JWMBProgressHUD {
         
         set {
             objc_setAssociatedObject(self,
@@ -146,15 +178,20 @@ extension UIView {
         }
         
         get {
-            if let userHud = objc_getAssociatedObject(self, &UIViewHUDKeys.viewHud) as? MBProgressHUD {
+            
+            
+            
+            if let userHud = objc_getAssociatedObject(self, &UIViewHUDKeys.viewHud) as? JWMBProgressHUD {
                 /// 用户设置的HUD
                 return userHud
-            } else if let extedHud = MBProgressHUD(for: self) {
-                /// 已存在的HUD
-                return extedHud
-            } else {
+            }
+//            else if let extedHud = JWMBProgressHUD(for: self) {
+//                /// 已存在的HUD
+//                return extedHud
+//            }
+            else {
                 /// 生成一个新的HUD
-                let aObject = MBProgressHUD(view: self)
+                let aObject = JWMBProgressHUD(view: self)
                     .config { $0.setup(style: JWHUDManager.shared.defaultStyle) }
                 objc_setAssociatedObject(self,
                                          &UIViewHUDKeys.viewHud,

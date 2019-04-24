@@ -13,7 +13,7 @@ public class JWHUDStyle: NSObject {
     
     
     ///  背景蒙层类型
-    public var markType: JWLoadingHUDMarkType = .defaultMarkType
+    public var markType: JWLoadingHUDMarkType = .`default`
     
     /// 四边最小边距
     public var minInsetMargin: CGFloat = 20
@@ -42,6 +42,9 @@ public class JWHUDStyle: NSObject {
     /// 最小大小
     public var minSize: CGSize = .zero
     
+    /// 跟随状态栏方向
+    internal var isFollowStatusBarOrientation: Bool = false
+    
     
 }
 
@@ -56,7 +59,7 @@ public enum JWLoadingHUDMarkType {
     
     
     /// 默认配置
-    public static let defaultMarkType = JWLoadingHUDMarkType.color(MarkDefaultColor.defaultMarkColor, isUserInteractionEnabled: true)
+    public static let `default` = JWLoadingHUDMarkType.color(MarkDefaultColor.defaultMarkColor, isUserInteractionEnabled: true)
     
     /// 默认渐变配置
     public static let darkGradient = JWLoadingHUDMarkType.gradient(MarkDefaultColor.darkGradient, isUserInteractionEnabled: false)
