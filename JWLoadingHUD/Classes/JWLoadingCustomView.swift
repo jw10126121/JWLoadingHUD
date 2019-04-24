@@ -114,7 +114,7 @@ public class JWLoadingCustomView: UIView {
         
         addSubview(containerStackView)
         
-        containerStackView.addArrangedSubview(loadingView)
+//        containerStackView.addArrangedSubview(loadingView)
         containerStackView.addArrangedSubview(iconImageView)
         containerStackView.addArrangedSubview(titleLabel)
         

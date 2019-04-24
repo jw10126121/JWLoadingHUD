@@ -49,7 +49,7 @@ internal extension MBProgressHUD {
                 self.show(animated: animated)
                 
                 if hiddenDelay > 0 {
-                    self.hide(animated: animated, afterDelay: hiddenDelay)
+                    self.dismiss(animated: animated, afterDelay: hiddenDelay)
                 }
                 
             })

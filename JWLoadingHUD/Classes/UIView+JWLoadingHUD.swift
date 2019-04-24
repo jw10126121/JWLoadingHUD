@@ -17,19 +17,19 @@ public extension UIView {
                  animated: Bool = true,
                  hiddenDelay: TimeInterval = 0) {
         
-        self.loadingHUDer.show(config: style, mode: mode, animated: animated, hiddenDelay: hiddenDelay)
-        
-        //        let hud = MBProgressHUD(view: self)
-        //        showMBHUD(hud, config: config, mode: mode, animated: animated, hiddenDelay: hiddenDelay)
+        let hud = self.hud
+        showMBHUD(hud,
+                  style: style,
+                  mode: mode,
+                  animated: animated,
+                  hiddenDelay: hiddenDelay)
         
     }
     
     func dismissHUD(animated: Bool = true, afterDelay: TimeInterval = 0) {
         
-        //        guard let activeHud = activeHUDs.firstObject as? MBProgressHUD else { return }
-        //        dismissMBHUD(hud: activeHud, animated: animated, afterDelay: afterDelay)
-        
-        self.loadingHUDer.dismiss(animated: animated, afterDelay: afterDelay)
+//        guard let activeHud = activeHUDs.firstObject as? MBProgressHUD else { return }
+        dismissMBHUD(hud: self.hud, animated: animated, afterDelay: afterDelay)
         
     }
     
@@ -45,16 +45,20 @@ public extension UIView {
                            hiddenDelay: TimeInterval = 0) {
         
 
-        let customV = customView(style: style)
+        /// 配置动画
         hud.animationType = .zoom
         hud.isHidden = true
+        /// 配置风格
         hud.setup(style: style)
         
         hud.mode = .customView
+        /// 配置hud自定义视图
+        let customV = customView(style: style)
         hud.customView = customV
         configHUDCustomView(customView: customV, mode: mode)
         
-        addSubview(hud)
+        /// 添加视图
+        if hud.superview != self { addSubview(hud) }
         bringSubviewToFront(hud)
         
         hud.show(in: self, animated: animated, hiddenDelay: hiddenDelay)
@@ -96,6 +100,7 @@ extension UIView {
     private struct UIViewHUDKeys {
         static var activeHUDs = "com.jw.app.loadingHUD.activeHUDs"
         static var queueHUDs  = "com.jw.app.loadingHUD.queueHUDs"
+        static var viewHud = "com.jw.app.loadingHUD.viewHud"
     }
     
     /// 当前活动的HUD
@@ -129,6 +134,64 @@ extension UIView {
             }
         }
     }
+    
+    /// HUD对象
+    internal var hud: MBProgressHUD {
+        
+        set {
+            objc_setAssociatedObject(self,
+                                     &UIViewHUDKeys.viewHud,
+                                     newValue,
+                                     objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+        }
+        
+        get {
+            if let userHud = objc_getAssociatedObject(self, &UIViewHUDKeys.viewHud) as? MBProgressHUD {
+                /// 用户设置的HUD
+                return userHud
+            } else if let extedHud = MBProgressHUD(for: self) {
+                /// 已存在的HUD
+                return extedHud
+            } else {
+                /// 生成一个新的HUD
+                let aObject = MBProgressHUD(view: self)
+                    .config { $0.setup(style: JWHUDManager.shared.defaultStyle) }
+                objc_setAssociatedObject(self,
+                                         &UIViewHUDKeys.viewHud,
+                                         aObject,
+                                         objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+                return aObject
+            }
+        }
+        
+    }
+    
+//    var loadingHUDer: JWLoadingHUDer {
+//        
+//        set {
+//            objc_setAssociatedObject(self,
+//                                     &UIView_MBProgressHUD_Key.hudManagerKey,
+//                                     newValue,
+//                                     objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+//        }
+//        
+//        get {
+//            let extObject = (objc_getAssociatedObject(self, &UIView_MBProgressHUD_Key.hudManagerKey) as? JWLoadingHUDer)
+//            if let extObject = extObject {
+//                return extObject
+//            } else {
+//                let aObject = JWLoadingHUDer(containerView: self)
+//                objc_setAssociatedObject(self,
+//                                         &UIView_MBProgressHUD_Key.hudManagerKey,
+//                                         aObject,
+//                                         objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+//                return aObject
+//            }
+//        }
+//        
+//    }
+
+
     
 }
 

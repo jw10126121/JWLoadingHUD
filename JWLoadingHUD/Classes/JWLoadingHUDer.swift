@@ -8,15 +8,7 @@
 import UIKit
 import MBProgressHUD
 
-/// HUD模式
-public enum JWHUDMode {
-    
-    /// HUD模式：加载图
-    case loading(String?)
-    /// HUD模式：图文
-    case imageText(UIImage?, String?)
-    
-}
+
 
 public class JWLoadingHUDer {
     
