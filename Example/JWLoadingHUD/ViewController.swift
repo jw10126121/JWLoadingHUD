@@ -105,6 +105,7 @@ extension ViewController: UITableViewDelegate {
         case 4:
             
             let config = JWHUDStyle()
+            config.markType = .color(UIColor.clear, isUserInteractionEnabled: false)
             view.showHUD(style: config,
                          mode: JWHUDMode.loading("正在加载"),
                          hiddenDelay: 3.0)

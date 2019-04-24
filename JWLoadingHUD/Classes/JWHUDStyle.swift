@@ -49,8 +49,8 @@ public enum JWLoadingHUDMarkType {
     
     /// 固定颜色
     case color(UIColor?, isUserInteractionEnabled: Bool)
-    /// 黑色渐变(背景黑色渐变，不可点击)
-    case darkGradient(UIColor, isUserInteractionEnabled: Bool)
+    /// 渐变色
+    case gradient(UIColor, isUserInteractionEnabled: Bool)
     /// 高斯模糊(背景模糊，不可点击)
     case blur(style: UIBlurEffect.Style, tintColor: UIColor?)
     
@@ -59,7 +59,7 @@ public enum JWLoadingHUDMarkType {
     public static let defaultMarkType = JWLoadingHUDMarkType.color(MarkDefaultColor.defaultMarkColor, isUserInteractionEnabled: true)
     
     /// 默认渐变配置
-    public static let darkGradient = JWLoadingHUDMarkType.darkGradient(MarkDefaultColor.darkGradient, isUserInteractionEnabled: false)
+    public static let darkGradient = JWLoadingHUDMarkType.gradient(MarkDefaultColor.darkGradient, isUserInteractionEnabled: false)
     
     
     private struct MarkDefaultColor {
@@ -73,7 +73,7 @@ public enum JWLoadingHUDMarkType {
         switch self {
         case let .color(_, isUserInteractionEnabled: enable):
             return enable
-        case let .darkGradient(_, isUserInteractionEnabled: enable):
+        case let .gradient(_, isUserInteractionEnabled: enable):
             return enable
         default:
             return false

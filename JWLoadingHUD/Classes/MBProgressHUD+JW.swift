@@ -33,7 +33,7 @@ internal extension MBProgressHUD {
             backgroundView.color = color ?? UIColor.clear
             if gradientLayer.superlayer != nil { gradientLayer.removeFromSuperlayer() }
             break
-        case let .darkGradient(color, isUserInteractionEnabled: _):
+        case let .gradient(color, isUserInteractionEnabled: _):
             backgroundView.style = .solidColor
             backgroundView.color = UIColor.clear
             if gradientLayer.superlayer != backgroundView {
