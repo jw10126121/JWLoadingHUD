@@ -88,6 +88,7 @@ extension ViewController: UITableViewDelegate {
             let config = JWHUDStyle()
             config.minSize = CGSize(width: 140, height: 120)
             config.backgroundColor = UIColor(white: 0, alpha: 0.95)
+            config.blurStyle = .dark
             view.showHUD(style: config,
                          mode: JWHUDMode.imageText(nil, "加载文字"),
                          hiddenDelay: 2.0)

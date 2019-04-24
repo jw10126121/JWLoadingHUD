@@ -25,6 +25,7 @@ internal extension MBProgressHUD {
          label.font = style.textFont
          minSize = style.minSize
         
+        backgroundView.blurEffectStyle = style.blurStyle
     }
     
     /// 配置(链式调用)

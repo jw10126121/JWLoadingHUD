@@ -11,6 +11,13 @@ import ObjectiveC
 /// HUD配置
 public class JWHUDStyle: NSObject {
     
+    
+    ///  背景蒙层类型
+    public var markType: JWLoadingHUDMarkType = .default
+    
+    /// 背景效果
+    public var blurStyle: UIBlurEffect.Style = .extraLight
+    
     /// 是否背景可点
     public var isUserInteractionEnabled: Bool = true
     
@@ -41,6 +48,15 @@ public class JWHUDStyle: NSObject {
     /// 最小大小
     public var minSize: CGSize = .zero
     
-
     
+}
+
+public enum JWLoadingHUDMarkType: Int {
+    
+    /// 默认
+    case `default`
+    /// 黑色渐变
+    case darkGradient
+    /// 自定义
+    case custom
 }

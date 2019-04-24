@@ -18,6 +18,7 @@ public extension UIView {
                  hiddenDelay: TimeInterval = 0) {
         
         let hud = self.hud
+        
         showMBHUD(hud,
                   style: style,
                   mode: mode,
@@ -28,7 +29,6 @@ public extension UIView {
     
     func dismissHUD(animated: Bool = true, afterDelay: TimeInterval = 0) {
         
-//        guard let activeHud = activeHUDs.firstObject as? MBProgressHUD else { return }
         dismissMBHUD(hud: self.hud, animated: animated, afterDelay: afterDelay)
         
     }
@@ -69,7 +69,7 @@ public extension UIView {
     
     private func dismissMBHUD(hud: UIView?, animated: Bool = true, afterDelay: TimeInterval = 0) {
         if let hud = hud as? MBProgressHUD {
-            hud.dismiss(animated: animated)
+            hud.dismiss(animated: animated, afterDelay: afterDelay)
         }
     }
     
