@@ -20,6 +20,7 @@ class ViewController: UIViewController {
                        "显示背景蒙层(颜色)",
                        "显示背景蒙层(渐变色)",
                        "显示背景蒙层(高斯模糊)",
+                       "修改状态栏方向",
     ]
     
     lazy var listView: UITableView = {
@@ -125,10 +126,13 @@ extension ViewController: UITableViewDelegate {
         case 7:
             
             let config = JWHUDStyle()
-            config.markType = JWLoadingHUDMarkType.darkGradient
+            config.markType = JWLoadingHUDMarkType.gradient(UIColor(white: 0, alpha: 0.4), isUserInteractionEnabled: true)
             view.showHUD(style: config,
                          mode: JWHUDMode.loading("正在加载"),
-                         hiddenDelay: 3.0)
+                         hiddenDelay: 0.0)
+            
+            
+            
             break
         case 8:
             
@@ -138,6 +142,14 @@ extension ViewController: UITableViewDelegate {
                          mode: JWHUDMode.loading("正在加载"),
                          hiddenDelay: 3.0)
             break
+        case 9:  /// 改变状态栏方向
+
+            if UIApplication.shared.statusBarOrientation.isPortrait {
+                UIApplication.shared.statusBarOrientation = .landscapeLeft
+            } else {
+                UIApplication.shared.statusBarOrientation = .portrait
+            }
+            break
             
         default:
             break
@@ -145,5 +157,10 @@ extension ViewController: UITableViewDelegate {
         
         
     }
+    
+    override var shouldAutorotate: Bool { return false }
+
+    override var prefersStatusBarHidden: Bool { return false }
+    
 }
 

@@ -2,19 +2,13 @@ PODS:
   - JWLoadingHUD (0.0.1):
     - MBProgressHUD (~> 1.1.0)
   - MBProgressHUD (1.1.0)
-  - SVProgressHUD (2.2.5)
-  - Toast-Swift (5.0.0)
 
 DEPENDENCIES:
   - JWLoadingHUD (from `../`)
-  - SVProgressHUD
-  - Toast-Swift (~> 5.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - MBProgressHUD
-    - SVProgressHUD
-    - Toast-Swift
 
 EXTERNAL SOURCES:
   JWLoadingHUD:
@@ -23,9 +17,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   JWLoadingHUD: f6cdfb0246c8fefc85fd139485f6400806e099af
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
 
-PODFILE CHECKSUM: 05e97599051134c6ab98a7a8a0b229be13da3b81
+PODFILE CHECKSUM: 3419885523fb7530e76c52031ecefa822ece3929
 
 COCOAPODS: 1.7.0.beta.3
