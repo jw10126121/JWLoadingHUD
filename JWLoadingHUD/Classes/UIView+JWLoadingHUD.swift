@@ -29,17 +29,17 @@ public extension UIView {
     
 
     
-    @objc private func didChangeStatusBarOrientationNotificationHandle(notification: Notification) {
+    @objc private func didChangeStatusBarOrientationNotificationHandle(notification: Notification?) {
         
         /// 当前状态栏方向
         let currentIO = UIApplication.shared.statusBarOrientation
-        let deviceIO = interfaceOrientation(from: UIDevice.current.orientation)
+//        let deviceIO = interfaceOrientation(from: UIDevice.current.orientation)
     
-        if deviceIO == .portrait {
+//        if deviceIO == .portrait {
             UIView.animate(withDuration: 0.3) {
-                self.hud.bezelView.transform = transformRotationAngle(from: currentIO)
+                self.hud.bezelView.transform = transformRotationAngle(from: currentIO, deviceOrientation: UIDevice.current.orientation)
             }
-        }
+//        }
 
     }
     
@@ -75,8 +75,8 @@ public extension UIView {
         /// 配置hud自定义视图
         let customV = customView(style: style)
         hud.customView = customV
-        configHUDCustomView(customView: customV, mode: mode)
-        
+        customV.mode = mode
+
         /// 添加视图
         if hud.superview != self { addSubview(hud) }
         bringSubviewToFront(hud)
@@ -94,7 +94,7 @@ public extension UIView {
         }
         
         hud.show(in: self, animated: animated, hiddenDelay: hiddenDelay)
-        
+//        didChangeStatusBarOrientationNotificationHandle(notification: nil)
         
     }
     
@@ -114,12 +114,6 @@ public extension UIView {
         view.titleLabel.textColor = style.textColor
         view.titleLabel.numberOfLines = style.textLine
         return view
-    }
-    
-    /// 配置 JWLoadingCustomView
-    private func configHUDCustomView(customView: JWLoadingCustomView, mode: JWHUDMode) {
-        
-        customView.mode = mode
     }
     
     
@@ -203,31 +197,6 @@ extension UIView {
         
     }
     
-//    var loadingHUDer: JWLoadingHUDer {
-//        
-//        set {
-//            objc_setAssociatedObject(self,
-//                                     &UIView_MBProgressHUD_Key.hudManagerKey,
-//                                     newValue,
-//                                     objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
-//        }
-//        
-//        get {
-//            let extObject = (objc_getAssociatedObject(self, &UIView_MBProgressHUD_Key.hudManagerKey) as? JWLoadingHUDer)
-//            if let extObject = extObject {
-//                return extObject
-//            } else {
-//                let aObject = JWLoadingHUDer(containerView: self)
-//                objc_setAssociatedObject(self,
-//                                         &UIView_MBProgressHUD_Key.hudManagerKey,
-//                                         aObject,
-//                                         objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
-//                return aObject
-//            }
-//        }
-//        
-//    }
-
 
     
 }

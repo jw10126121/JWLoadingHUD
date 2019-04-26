@@ -43,7 +43,7 @@ public class JWHUDStyle: NSObject {
     public var minSize: CGSize = .zero
     
     /// 跟随状态栏方向
-    internal var isFollowStatusBarOrientation: Bool = false
+    public var isFollowStatusBarOrientation: Bool = false
     
     
 }

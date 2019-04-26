@@ -127,6 +127,8 @@ extension ViewController: UITableViewDelegate {
             
             let config = JWHUDStyle()
             config.markType = JWLoadingHUDMarkType.gradient(UIColor(white: 0, alpha: 0.4), isUserInteractionEnabled: true)
+            config.isFollowStatusBarOrientation = true
+
             view.showHUD(style: config,
                          mode: JWHUDMode.loading("正在加载"),
                          hiddenDelay: 0.0)
@@ -144,9 +146,13 @@ extension ViewController: UITableViewDelegate {
             break
         case 9:  /// 改变状态栏方向
 
-            if UIApplication.shared.statusBarOrientation.isPortrait {
+            if UIApplication.shared.statusBarOrientation == .portrait {
                 UIApplication.shared.statusBarOrientation = .landscapeLeft
-            } else {
+            } else if UIApplication.shared.statusBarOrientation == .landscapeLeft {
+                UIApplication.shared.statusBarOrientation = .portraitUpsideDown
+            } else if UIApplication.shared.statusBarOrientation == .portraitUpsideDown {
+                UIApplication.shared.statusBarOrientation = .landscapeRight
+            } else if UIApplication.shared.statusBarOrientation == .landscapeRight {
                 UIApplication.shared.statusBarOrientation = .portrait
             }
             break
